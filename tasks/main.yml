@@ -82,9 +82,6 @@
   sudo_user: "{{ aegir_user }}"
   when: valkyrie_disable_before_delete_check|failed
 
-- include: skynet.yml
-  when: valkyrie_use_skynet == True
-
 - include: avahi.yml
   when: valkyrie_use_avahi == True
 

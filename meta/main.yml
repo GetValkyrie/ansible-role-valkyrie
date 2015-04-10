@@ -4,6 +4,12 @@ dependencies:
     src: git+http://github.com/GetValkyrie/ansible-role-aegir.git
     aegir_makefile: "{{ valkyrie_makefile }}"
     aegir_frontend_url: "{{ valkyrie_frontend_url }}"
+  - role: getvalkyrie.skynet
+    src: git+http://github.com/GetValkyrie/ansible-role-skynet.git
+    skynet_enable: "{{ valkyrie_use_skynet }}"
+    skynet_repo: "{{ valkyrie_skynet_repo }}"
+    skynet_version: "{{ valkyrie_skynet_version }}"
+    skynet_update: "{{ valkyrie_skynet_update }}"
 
 galaxy_info:
   author: ergonlogic

@@ -34,6 +34,7 @@ install:
 
   # Install required dependencies.
   - ansible-galaxy install http://github.com/getvalkyrie/ansible-role-aegir,,getvalkyrie.aegir
+  - ansible-galaxy install http://github.com/getvalkyrie/ansible-role-skynet,,getvalkyrie.skynet
 
 script:
   # Check the role/playbook's syntax.

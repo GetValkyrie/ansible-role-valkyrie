@@ -23,9 +23,22 @@
   template:
     src: ssh-config.j2
     dest: "{{ valkyrie_deploy_key_dir }}/config"
-    owner: "{{ valkyrie_deploy_user }}"
   sudo: yes
-  sudo_user: "{{ valkyrie_deploy_user }}"
+
+- name: Ensure proper ownership of SSH directory and files
+  file:
+    path: "{{ valkyrie_deploy_key_dir }}"
+    owner: "{{ valkyrie_deploy_user }}"
+    group: "{{ valkyrie_deploy_user }}"
+    recurse: yes
+  sudo: yes
+
+- name: Secure SSH private key
+  file:
+    path: "{{ valkyrie_deploy_key_dir }}/{{ valkyrie_deploy_key_name }}"
+    mode: 0600
+  sudo: yes
+
 
 - name: Check for indicator that we're running in a Vagrant VM.
   stat:

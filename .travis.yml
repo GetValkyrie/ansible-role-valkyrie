@@ -18,6 +18,7 @@ before_install:
   - mkdir ~/.python-eggs
   - chmod 700 ~/.python-eggs
   # Completely remove mysql
+  - sudo pkill -f mysql
   - sudo apt-get remove -y --purge mysql-server mysql-client mysql-common
   - sudo apt-get autoremove -y
   - sudo apt-get autoclean

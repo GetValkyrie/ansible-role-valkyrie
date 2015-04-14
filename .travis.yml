@@ -1,6 +1,8 @@
 ---
 language: python
 python: "2.7"
+# Opt into fully virtualized infrastructure
+sudo: required
 
 env:
   - SITE=test.yml

@@ -1,4 +1,10 @@
 ---
+- name: Grant 'aegir' user access to system logs
+  user:
+    name: "{{ aegir_user }}"
+    append: yes
+    groups: adm
+
 - name: Ensure 'aegir' user SSH dir exists
   file:
     path: /var/aegir/.ssh

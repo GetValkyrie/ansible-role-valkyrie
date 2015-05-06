@@ -21,3 +21,8 @@ projects[hosting_reinstall][type] = "module"
 projects[hosting_reinstall][download][type] = "git"
 projects[hosting_reinstall][download][url] = "http://git.drupal.org/sandbox/ergonlogic/2386543.git"
 projects[hosting_reinstall][download][branch] = "7.x-3.x"
+
+projects[hosting_s3][type] = "module"
+projects[hosting_s3][download][type] = "git"
+projects[hosting_s3][download][url] = "http://github.com/GetValkyrie/hosting_s3.git"
+projects[hosting_s3][download][branch] = "master"

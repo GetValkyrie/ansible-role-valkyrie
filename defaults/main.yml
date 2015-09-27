@@ -5,7 +5,7 @@ valkyrie_modules:
   - hosting_alias
   - hosting_git
   - hosting_git_pull
-  - hosting_reinstall
+  - hosting_site_reinstall
   - hosting_valkyrie
 valkyrie_use_skynet: True
 valkyrie_skynet_repo: https://github.com/GetValkyrie/skynet.git
